@@ -15,7 +15,7 @@ const drums = {
 
 function addDrum(key, value) {
   return `
-  <section id="${key}" class="key btn">
+  <section id="${key}" class="key">
     <audio src="sounds/${value}.wav"></audio>
     <h3>${key}</h3>
     <p>${value}</p>
