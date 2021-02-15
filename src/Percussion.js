@@ -22,7 +22,7 @@ export default class Percussion {
     this.section.appendChild(p);
     this.section.addEventListener('click', (e) => {
       this.playAudio();
-      this.section.classList.add('playing');
+      this.addPlayingState();
     });
     this.section.addEventListener('transitionend', (e) => this.removePlayingState());
     this.$('.drums').appendChild(this.section);
@@ -32,13 +32,15 @@ export default class Percussion {
     this.audio.currentTime = 0;
     this.audio.play();
   }
+  addPlayingState() {
+    this.section.classList.add('playing');
+  }
   removePlayingState() {
     if (!this.section) return;
     if (this.section.className.includes('playing')) {
       this.section.classList.remove('playing');
     }
   }
-
   // addHtml() {
   //   return `
   //   <section id="${this.key}" class="key">
