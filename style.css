@@ -6,11 +6,18 @@
 * {
 	padding: 0;
 	margin: 0;
-  user-select: none;
 }
 
 body {
 	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	color: #000;
+	font-size: 2rem;
+	margin-bottom: 20px;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 
 .container {
@@ -27,6 +34,8 @@ body {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+  width: 75vw;
+  max-width: 640px;
 }
 
 .key {
@@ -35,11 +44,12 @@ body {
 	padding: 1rem;
 	min-width: 4rem;
 	min-height: 4rem;
-	background: #222;
+	background: #fff;
 	border-radius: 1rem;
 	transition: all 0.1s;
   box-shadow: 0 10px 15px -5px #e05a0099;
   cursor: pointer;
+  user-select: none;
 }
 
 .key.playing {
@@ -52,17 +62,17 @@ body {
   box-shadow: 0 10px 15px -5px var(--accent-shadow-color);
 }
 
-.key:hover > p {
-	color: #000;
-}
-
 .key > h3 {
-	color: #ffffff;
+	color: #000;
 	font-size: 2rem;
 	margin-bottom: 5px;
 	font-weight: 900;
 	text-transform: uppercase;
-  text-shadow: 0 2px 2px #000000aa;
+}
+
+.key:hover > h3,
+.key.playing > h3 {
+	color: #fff;
 }
 
 .key > p {
@@ -73,12 +83,7 @@ body {
   margin: 0;
 }
 
+.key:hover > p,
 .key.playing > p {
-	color: #000;
-}
-
-@media only screen and (max-width: 600px) {
-  .key {
-    margin: 0.5rem;
-  }
+	color: #fff;
 }

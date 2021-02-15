@@ -41,12 +41,4 @@ export default class Percussion {
       this.section.classList.remove('playing');
     }
   }
-  // addHtml() {
-  //   return `
-  //   <section id="${this.key}" class="key">
-  //     <audio src="sounds/${this.name}.wav"></audio>
-  //     <h3>${this.key}</h3>
-  //     <p>${this.name}</p>
-  //   </section>`;
-  // }
 }
