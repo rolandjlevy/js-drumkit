@@ -8,18 +8,14 @@ export default class Percussion {
     return document.querySelector(selector);
   }
   add() {
+    this.audio = new Audio(`sounds/${this.name}.wav`);
     this.section = document.createElement('section');
     this.section.id = this.key;
     this.section.classList.add('key');
-    this.audio = document.createElement('audio'); 
-    this.audio.src = `sounds/${this.name}.wav`;
-    this.section.appendChild(this.audio);
-    const h3 = document.createElement('h3'); 
-    h3.textContent = this.key;
-    this.section.appendChild(h3);
-    const p = document.createElement('p'); 
-    p.textContent = this.name;
-    this.section.appendChild(p);
+    this.section.innerHTML = `
+      <h3>${this.key}</h3>
+      <p>${this.name}</p>
+    `;
     this.section.addEventListener('click', (e) => {
       this.playAudio();
       this.addPlayingState();
