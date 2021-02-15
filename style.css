@@ -1,5 +1,6 @@
 :root {
   --accent-color: #ff6600;
+  --accent-shadow-color: #e05a00;
 }
 
 * {
@@ -48,7 +49,7 @@ body {
 
 .key:hover {
 	background-color: var(--accent-color);
-  box-shadow: 0 10px 15px -5px #e05a00;
+  box-shadow: 0 10px 15px -5px var(--accent-shadow-color);
 }
 
 .key:hover > p {
