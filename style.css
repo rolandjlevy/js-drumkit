@@ -1,6 +1,6 @@
 :root {
-  --accent-color: hsla(180, 100%, 55%, 0.9);
-  --accent-shadow-color: hsl(180, 100%, 65%);
+  --accent-color: hsla(185, 100%, 55%, 0.9);
+  --accent-shadow-color: hsl(185, 100%, 65%);
 }
 
 * {
@@ -10,15 +10,13 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-  background-color: hsl(180, 21%, 10%);
+  background-color: hsl(185, 21%, 10%);
   opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #162222 20px ), repeating-linear-gradient( #293e3e55, #293e3e );
-  /* background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA); 
-  background: linear-gradient(to right, #FFFFFF, #FFEFBA);  */
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, hsl(185, 21%, 11%) 20px ), repeating-linear-gradient( hsla(185, 20%, 20%, 0.333), hsl(185, 20%, 20%) );
 }
 
 h1 {
-	color: hsla(180, 80%, 56%, 0.5);
+	color: hsla(185, 80%, 56%, 0.5);
 	font-size: 2rem;
 	margin-bottom: 20px;
 	font-weight: 900;
@@ -48,29 +46,28 @@ h1 {
 	padding: 1rem;
 	min-width: 4rem;
 	min-height: 4rem;
-  background: hsla(180, 10%, 5%, 0.5);
+  background: hsla(185, 10%, 5%, 0.5);
   background-blend-mode: multiply;
 	border-radius: 1rem;
 	transition: all 0.1s;
-  box-shadow: 0 10px 15px -5px hsla(180, 80%, 56%, 0.5);
+  box-shadow: 0 15px 20px -5px hsla(185, 80%, 65%, 0.7);
   cursor: pointer;
   user-select: none;
 }
 
+.key:hover,
 .key[data-playing=true] {
 	background-color: var(--accent-color);
   background-blend-mode:lighten;
+  box-shadow: 0 10px 15px -5px #00000099;
+}
+
+.key[data-playing=true] {
 	transform: scale(1.2) rotate(5deg);
 }
 
-.key:hover {
-	background-color: var(--accent-color);
-  background-blend-mode: overlay;
-  box-shadow: 0 10px 15px -5px var(--accent-shadow-color);
-}
-
 .key > h3 {
-	color: hsla(180, 80%, 80%, 1);
+	color: hsla(185, 80%, 80%, 1);
 	font-size: 2rem;
 	margin-bottom: 5px;
 	font-weight: 900;
@@ -79,7 +76,7 @@ h1 {
 
 .key:hover > h3,
 .key[data-playing=true] > h3 {
-	color: hsl(180, 80%, 5%);
+	color: hsl(185, 80%, 5%);
 }
 
 .key > p {
