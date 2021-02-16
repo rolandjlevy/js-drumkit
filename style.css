@@ -1,6 +1,6 @@
 :root {
-  --accent-color: #ff6600;
-  --accent-shadow-color: #e05a00;
+  --accent-color: hsla(180, 100%, 55%, 0.9);
+  --accent-shadow-color: hsl(180, 100%, 65%);
 }
 
 * {
@@ -10,13 +10,15 @@
 
 body {
 	font-family: 'Roboto', sans-serif;
-  background: #FFEFBA;
-  background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA); 
-  background: linear-gradient(to right, #FFFFFF, #FFEFBA); 
+  background-color: hsl(180, 21%, 10%);
+  opacity: 1;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #162222 20px ), repeating-linear-gradient( #293e3e55, #293e3e );
+  /* background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA); 
+  background: linear-gradient(to right, #FFFFFF, #FFEFBA);  */
 }
 
 h1 {
-	color: #000;
+	color: hsla(180, 80%, 56%, 0.5);
 	font-size: 2rem;
 	margin-bottom: 20px;
 	font-weight: 900;
@@ -46,26 +48,29 @@ h1 {
 	padding: 1rem;
 	min-width: 4rem;
 	min-height: 4rem;
-	background: #fff;
+  background: hsla(180, 10%, 5%, 0.5);
+  background-blend-mode: multiply;
 	border-radius: 1rem;
 	transition: all 0.1s;
-  box-shadow: 0 10px 15px -5px #e05a0099;
+  box-shadow: 0 10px 15px -5px hsla(180, 80%, 56%, 0.5);
   cursor: pointer;
   user-select: none;
 }
 
-.key.playing {
+.key[data-playing=true] {
 	background-color: var(--accent-color);
-	transform: scale(1.1);
+  background-blend-mode:lighten;
+	transform: scale(1.2) rotate(5deg);
 }
 
 .key:hover {
 	background-color: var(--accent-color);
+  background-blend-mode: overlay;
   box-shadow: 0 10px 15px -5px var(--accent-shadow-color);
 }
 
 .key > h3 {
-	color: #000;
+	color: hsla(180, 80%, 80%, 1);
 	font-size: 2rem;
 	margin-bottom: 5px;
 	font-weight: 900;
@@ -73,8 +78,8 @@ h1 {
 }
 
 .key:hover > h3,
-.key.playing > h3 {
-	color: #fff;
+.key[data-playing=true] > h3 {
+	color: hsl(180, 80%, 5%);
 }
 
 .key > p {
@@ -86,6 +91,6 @@ h1 {
 }
 
 .key:hover > p,
-.key.playing > p {
-	color: #fff;
+.key[data-playing=true] > p {
+	color: #000;
 }

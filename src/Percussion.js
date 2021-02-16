@@ -11,6 +11,7 @@ export default class Percussion {
     this.audio = new Audio(`sounds/${this.name}.wav`);
     this.section = document.createElement('section');
     this.section.id = this.key;
+    this.section.dataset.playing = false;
     this.section.classList.add('key');
     this.section.innerHTML = `
       <h3>${this.key}</h3>
@@ -29,12 +30,12 @@ export default class Percussion {
     this.audio.play();
   }
   addPlayingState() {
-    this.section.classList.add('playing');
+    this.section.dataset.playing = true;
   }
   removePlayingState() {
     if (!this.section) return;
-    if (this.section.className.includes('playing')) {
-      this.section.classList.remove('playing');
+    if (Boolean(this.section.dataset.playing)) {
+      this.section.dataset.playing = false;
     }
   }
 }
