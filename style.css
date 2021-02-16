@@ -1,5 +1,5 @@
 :root {
-  --accent-color: hsla(185, 100%, 55%, 0.9);
+  --accent-color: rgb(86, 241, 255);
   --accent-shadow-color: hsl(185, 100%, 65%);
 }
 
@@ -58,7 +58,7 @@ h1 {
 .key:hover,
 .key[data-playing=true] {
 	background-color: var(--accent-color);
-  background-blend-mode:lighten;
+  background-blend-mode:screen;
   box-shadow: 0 10px 15px -5px #00000099;
 }
 
