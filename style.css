@@ -1,6 +1,6 @@
 :root {
-  --accent-color: hsl(185, 100%, 67%);
-  --accent-shadow-color: hsl(185, 100%, 65%);
+  --accent-color: hsl(195, 100%, 67%);
+  --accent-shadow-color: hsl(195, 100%, 65%);
   --accent-shadow-color: hsl(210, 90%, 33%);
 }
 
@@ -11,13 +11,13 @@
 }
 
 body {
-  background-color: hsl(185, 21%, 11%);
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, hsl(185, 21%, 11%) 20px ), repeating-linear-gradient( hsla(185, 20%, 20%, 0.333), hsl(185, 20%, 20%) );
+  background-color: hsl(195, 21%, 11%);
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, hsl(195, 21%, 11%) 20px ), repeating-linear-gradient( hsla(195, 20%, 20%, 0.333), hsl(195, 20%, 20%) );
   font-family: 'Kurale', serif;
 }
 
 h1 {
-	color: hsla(185, 80%, 56%, 1);
+	color: hsla(195, 80%, 56%, 1);
 	font-size: 2rem;
 	margin-bottom: 20px;
 	font-weight: 900;
@@ -49,11 +49,11 @@ h1 {
 	padding: 1rem;
 	min-width: 6rem;
 	min-height: 6rem;
-  background: hsla(185, 10%, 5%, 0.5);
+  background: hsla(195, 10%, 5%, 0.5);
   background-blend-mode: multiply;
 	border-radius: 1rem;
 	transition: all 0.1s;
-  box-shadow: 0 15px 20px -5px hsla(185, 80%, 65%, 0.6), inset -7px -7px 10px #000;
+  box-shadow: 0 15px 20px -5px hsla(195, 80%, 65%, 0.6), inset -7px -7px 10px #000;
   cursor: pointer;
   user-select: none;
 }
@@ -62,7 +62,7 @@ h1 {
 .btn[data-playing=true] {
 	background-color: var(--accent-color);
   background-blend-mode:screen;
-  box-shadow: 0 10px 15px -5px #00000099, inset -7px -7px 10px hsla(185, 80%, 15%, 0.7);
+  box-shadow: 0 10px 15px -5px #00000099, inset -7px -7px 10px hsla(195, 80%, 15%, 0.7);
 }
 
 .btn[data-playing=true] {
@@ -70,7 +70,7 @@ h1 {
 }
 
 .btn > h3 {
-	color: hsla(185, 80%, 80%, 1);
+	color: hsla(195, 80%, 80%, 1);
 	font-size: 2rem;
 	margin-bottom: 5px;
 	font-weight: 900;
@@ -80,7 +80,7 @@ h1 {
 
 .btn:hover > h3,
 .btn[data-playing=true] > h3 {
-	color: hsl(185, 80%, 5%);
+	color: hsl(195, 80%, 5%);
 }
 
 .btn > p {
