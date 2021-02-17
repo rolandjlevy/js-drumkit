@@ -12,7 +12,7 @@ export default class Percussion {
     this.section = document.createElement('section');
     this.section.id = this.key;
     this.section.dataset.playing = false;
-    this.section.classList.add('key');
+    this.section.classList.add('btn');
     this.section.innerHTML = `
       <h3>${this.key}</h3>
       <p>${this.name}</p>
