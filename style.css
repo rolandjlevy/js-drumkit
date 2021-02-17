@@ -11,17 +11,19 @@
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
   background-color: hsl(185, 21%, 11%);
   background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, hsl(185, 21%, 11%) 20px ), repeating-linear-gradient( hsla(185, 20%, 20%, 0.333), hsl(185, 20%, 20%) );
+  font-family: 'Kurale', serif;
 }
 
 h1 {
-	color: hsla(185, 80%, 56%, 0.5);
+	color: hsla(185, 80%, 56%, 1);
 	font-size: 2rem;
 	margin-bottom: 20px;
 	font-weight: 900;
 	text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Kurale', serif;
 }
 
 .container {
@@ -73,6 +75,7 @@ h1 {
 	margin-bottom: 5px;
 	font-weight: 900;
 	text-transform: uppercase;
+  font-family: 'Ranchers', cursive;
 }
 
 .btn:hover > h3,
@@ -86,6 +89,7 @@ h1 {
 	text-transform: uppercase;
   padding: 0;
   margin: 0;
+  letter-spacing: 1px;
 }
 
 .btn:hover > p,
