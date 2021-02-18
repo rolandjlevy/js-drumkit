@@ -1,6 +1,5 @@
 :root {
   --accent-color: hsl(195, 100%, 67%);
-  --accent-shadow-color: hsl(195, 100%, 65%);
   --accent-shadow-color: hsl(210, 90%, 33%);
 }
 
@@ -19,7 +18,7 @@ body {
 h1 {
 	color: hsla(195, 80%, 56%, 1);
 	font-size: 2rem;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	font-weight: 900;
 	text-transform: uppercase;
   letter-spacing: 1px;
@@ -49,24 +48,46 @@ h1 {
 	padding: 1rem;
 	min-width: 6rem;
 	min-height: 6rem;
-  background: hsla(195, 10%, 5%, 0.5);
+  background-color: hsla(195, 10%, 5%, 0.5);
   background-blend-mode: multiply;
 	border-radius: 1rem;
-	transition: all 0.1s;
   box-shadow: 0 15px 20px -5px hsla(195, 80%, 65%, 0.6), inset -7px -7px 10px #000;
   cursor: pointer;
   user-select: none;
+	transition: background-color 0.2s ease;
 }
+
+.btn.morph {
+  opacity: 0;
+  animation-name: morph;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.btn.morph:nth-child(1) { animation-delay: 0.1s; }
+.btn.morph:nth-child(2) { animation-delay: 0.2s; }
+.btn.morph:nth-child(3) { animation-delay: 0.3s; }
+.btn.morph:nth-child(4) { animation-delay: 0.4s; }
+.btn.morph:nth-child(5) { animation-delay: 0.5s; }
+.btn.morph:nth-child(6) { animation-delay: 0.6s; }
+.btn.morph:nth-child(7) { animation-delay: 0.7s; }
+.btn.morph:nth-child(8) { animation-delay: 0.8s; }
+.btn.morph:nth-child(9) { animation-delay: 0.9s; }
 
 .btn:hover,
 .btn[data-playing=true] {
 	background-color: var(--accent-color);
-  background-blend-mode:screen;
+  background-blend-mode: screen;
   box-shadow: 0 10px 15px -5px #00000099, inset -7px -7px 10px hsla(195, 80%, 15%, 0.7);
 }
 
 .btn[data-playing=true] {
-	transform: scale(1.2) rotate(5deg);
+	/* transform: scale(1.2) rotate(5deg); */
+  animation-name: active;
+  animation-duration: 0.2s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
 }
 
 .btn > h3 {
@@ -95,4 +116,26 @@ h1 {
 .btn:hover > p,
 .btn[data-playing=true] > p {
 	color: #000;
+}
+
+@keyframes morph {
+  from {
+    transform: scale(0) rotate(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes active {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+	  transform: scale(1.2) rotate(5deg);
+    opacity: 1;
+  }
 }

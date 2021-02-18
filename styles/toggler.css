@@ -1,0 +1,75 @@
+:root {
+  --border: 2px;
+  --speed: 200ms;
+  --static-grey: hsl(195, 20%, 75%);
+  --height: 40px;
+  --colour:hsl(195, 100%, 35%);
+}
+
+/* Customise height */
+.btn-toggler {
+  position: relative;
+  display: inline-block;
+  width: var(--height);
+  height: calc(var(--height)/2 + var(--border));
+  margin: 5px;
+}
+
+/* Hide native checkbox */
+.btn-toggler > input {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Customise colours */
+.btn-toggler > input:checked + .slider {
+  background-color: var(--colour);
+}
+
+
+/* Mousedown behaviour */
+.btn-toggler > input:active + .slider {
+  filter: brightness(90%);
+  top: 1px;
+  bottom: -1px;
+}
+
+/* Slider settings */
+.btn-toggler > .slider {
+  cursor: pointer;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: var(--static-grey);
+}
+
+/* Button checked animation */
+.btn-toggler > input:checked + .slider:before {
+  -webkit-transform: translateX(calc(var(--height)/2 - var(--border)));
+  transform: translateX(calc(var(--height)/2 - var(--border)));
+}
+
+/* Button unchecked */
+.btn-toggler > .slider:before {
+  content: "";
+  left: var(--border);
+  bottom: var(--border);
+  background-color: white;
+  height: calc(var(--height)/2 - var(--border));
+  width: calc(var(--height)/2 - var(--border));
+}
+
+/* Slider transition */
+.btn-toggler > .slider,
+.btn-toggler > .slider:before {
+  position: absolute;
+  -webkit-transition: var(--speed);
+  transition: var(--speed);
+}
+
+/* Make slider ends rounded */
+.btn-toggler > .slider.round:before {
+  border-radius: 50%;
+}
+
+.btn-toggler > .slider.round {
+  border-radius: calc(var(--height)/2 + var(--border));
+}

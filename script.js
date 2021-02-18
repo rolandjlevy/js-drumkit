@@ -1,4 +1,4 @@
-import Percussion from './src/Percussion.js';
+import { Percussion } from './src/Percussion.js';
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -25,4 +25,31 @@ window.addEventListener('keydown', (e) => {
   if (!found) return;
   found.playAudio();
   found.addPlayingState();
+});
+
+// Add randomisation
+
+let intervalId;
+
+const getRandomInt = (max) =>  Math.floor(Math.random() * Math.floor(max));
+
+function startPlaying() {
+  intervalId = setInterval(() => {
+    const randomNum = getRandomInt(percussion.length);
+    percussion[randomNum].playAudio();
+    percussion[randomNum].addPlayingState();
+  }, 200);
+}
+
+function stopPlaying() {
+  clearInterval(intervalId);
+}
+
+window.addEventListener('DOMContentLoaded', (e) => {
+  $('.drums').focus();
+  $('.drums').click();
+});
+
+$('input[name=toggler]').addEventListener('change', (e) => {
+  e.target.checked ? startPlaying() : stopPlaying();
 });
