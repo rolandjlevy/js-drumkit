@@ -1,4 +1,5 @@
 import { Percussion } from './src/Percussion.js';
+import { AutoPlay } from './src/AutoPlay.js';
 
 const $ = (selector) => document.querySelector(selector);
 
@@ -14,11 +15,13 @@ const keyMap = {
   "l": "tink"
 }
 
-const percussion = [];
+const percussionArray = [];
 
 Object.entries(keyMap).forEach(([key, name]) => {
-  percussion.push(new Percussion(key, name));
+  percussionArray.push(new Percussion(key, name));
 });
+
+new AutoPlay(percussionArray);
 
 window.addEventListener('keydown', (e) => {
   const found = percussion.find(item => item.key === e.key);
@@ -27,29 +30,7 @@ window.addEventListener('keydown', (e) => {
   found.addPlayingState();
 });
 
-// Add randomisation
-
-let intervalId;
-
-const getRandomInt = (max) =>  Math.floor(Math.random() * Math.floor(max));
-
-function startPlaying() {
-  intervalId = setInterval(() => {
-    const randomNum = getRandomInt(percussion.length);
-    percussion[randomNum].playAudio();
-    percussion[randomNum].addPlayingState();
-  }, 200);
-}
-
-function stopPlaying() {
-  clearInterval(intervalId);
-}
-
 window.addEventListener('DOMContentLoaded', (e) => {
   $('.drums').focus();
   $('.drums').click();
-});
-
-$('input[name=toggler]').addEventListener('change', (e) => {
-  e.target.checked ? startPlaying() : stopPlaying();
 });
