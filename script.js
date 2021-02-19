@@ -24,7 +24,7 @@ Object.entries(keyMap).forEach(([key, name]) => {
 new AutoPlay(percussionArray);
 
 window.addEventListener('keydown', (e) => {
-  const found = percussion.find(item => item.key === e.key);
+  const found = percussionArray.find(item => item.key === e.key);
   if (!found) return;
   found.playAudio();
   found.addPlayingState();

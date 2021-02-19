@@ -34,6 +34,7 @@ export class Percussion {
     this.sound.play();
   }
   addPlayingState() {
+    this.section.dataset.playing = false;
     this.section.dataset.playing = true;
   }
   removeMorph() {

@@ -31,6 +31,7 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+  overflow: hidden;
 } 
 
 .drums {
@@ -38,16 +39,16 @@ h1 {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-  width: 75vw;
+  width: 85vw;
   max-width: 640px;
 }
 
 .btn {
 	text-align: center;
-	margin: 1rem;
-	padding: 1rem;
-	min-width: 6rem;
-	min-height: 6rem;
+	margin: 0.5rem;
+	padding: 1rem 0.5rem;
+	width: 5rem;
+	height: 5rem;
   background-color: hsla(195, 10%, 5%, 0.5);
   background-blend-mode: multiply;
 	border-radius: 1rem;
@@ -55,6 +56,7 @@ h1 {
   cursor: pointer;
   user-select: none;
 	transition: background-color 0.2s ease;
+  animation: none;
 }
 
 .btn.morph {
@@ -78,21 +80,21 @@ h1 {
 .btn:hover,
 .btn[data-playing=true] {
 	background-color: var(--accent-color);
-  background-blend-mode: screen;
   box-shadow: 0 10px 15px -5px #00000099, inset -7px -7px 10px hsla(195, 80%, 15%, 0.7);
 }
 
 .btn[data-playing=true] {
-	/* transform: scale(1.2) rotate(5deg); */
   animation-name: active;
   animation-duration: 0.2s;
   animation-timing-function: ease;
   animation-fill-mode: both;
+  /* animation-play-state: paused;
+  animation-play-state: running; */
 }
 
 .btn > h3 {
 	color: hsla(195, 80%, 80%, 1);
-	font-size: 2rem;
+	font-size: 1.5rem;
 	margin-bottom: 5px;
 	font-weight: 900;
 	text-transform: uppercase;
@@ -132,10 +134,16 @@ h1 {
 @keyframes active {
   0%, 100% {
     transform: scale(1) rotate(0deg);
-    opacity: 1;
   }
   50% {
 	  transform: scale(1.2) rotate(5deg);
-    opacity: 1;
   }
+}
+
+.m-b-10 {
+  margin-bottom: 10px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
 }
