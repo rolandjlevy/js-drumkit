@@ -10,8 +10,8 @@
 }
 
 body {
-  background-color: hsl(195, 21%, 11%);
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, hsl(195, 21%, 11%) 20px ), repeating-linear-gradient( hsla(195, 20%, 20%, 0.333), hsl(195, 20%, 20%) );
+  background-color: hsl(195, 20%, 10%);
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, hsl(195, 20%, 10%) 30px ), repeating-linear-gradient( hsla(195, 20%, 20%, 0.5), hsl(195, 20%, 20%) ), repeating-radial-gradient( circle at 0 0, transparent 0, hsl(288, 100%, 70%) 30px );
   font-family: 'Kurale', serif;
 }
 
@@ -100,7 +100,7 @@ h1 {
 .btn:hover,
 .btn[data-playing=true] {
 	background-color: var(--accent-color);
-  box-shadow: 0 10px 15px -5px #00000099, inset -5px -5px 10px hsla(195, 0%, 25%, 0.8);
+  box-shadow: 0 10px 15px -5px hsla(195, 100%, 20%, 1), inset -5px -5px 10px hsla(195, 0%, 25%, 0.8);
 }
 
 .btn[data-playing=true] {
