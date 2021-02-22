@@ -81,7 +81,7 @@ h1 {
 .btn:hover,
 .btn[data-playing=true] {
 	background-color: var(--accent-color);
-  box-shadow: 0 10px 15px -5px hsla(195, 100%, 20%, 1), inset -5px -5px 10px hsla(195, 0%, 25%, 0.8);
+  box-shadow: 0 10px 15px -5px hsla(195, 100%, 10%, 1), inset -5px -5px 10px hsla(195, 0%, 15%, 0.9);
 }
 
 .btn[data-playing=true] {
