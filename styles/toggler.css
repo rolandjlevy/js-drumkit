@@ -12,7 +12,7 @@
   display: inline-block;
   width: var(--height);
   height: calc(var(--height)/2 + var(--border));
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 /* Hide native checkbox */
