@@ -1,13 +1,13 @@
-# DRUMK♩T
+# DRUMKIT
 
-A simple drumkit made with CSS and JS with an autoplay button
+Play a range of different percussion instruments on the keyboard or on your phone.
 
 ### Links 🔗
 - [Play the drumkit](https://js-drumkit.rolandjlevy.repl.co/)
 - [View the source code](https://repl.it/@RolandJLevy/js-drumkit)
 - [Explore the Github repo](https://github.com/rolandjlevy/js-drumkit)
 
-### How to Play 🎵
+### How to Play ♫
 - In desktop view use the keyboard or mouse
 - In mobile view press on the keys
 - Toggle the autoplay button for a random beat
