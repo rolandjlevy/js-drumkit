@@ -1,18 +1,17 @@
-import { Percussion } from './src/Percussion.js';
-import { AutoPlay } from './src/AutoPlay.js';
-
-const $ = (selector) => document.querySelector(selector);
+import Percussion from './src/Percussion.js';
+import AutoPlay from './src/AutoPlay.js';
+import UI from './src/UI.js';
 
 const keyMap = {
-  "a": "hihat", 
-  "s": "openhat",
-  "d": "ride",
-  "f": "snare",
-  "g": "kick",
-  "h": "tom",
-  "j": "boom",
-  "k": "clap",
-  "l": "tink"
+  "A": "hihat", 
+  "S": "openhat",
+  "D": "ride",
+  "F": "snare",
+  "G": "kick",
+  "H": "tom",
+  "J": "boom",
+  "K": "clap",
+  "L": "tink"
 }
 
 const percussionArray = [];
@@ -24,13 +23,15 @@ Object.entries(keyMap).forEach(([key, name]) => {
 new AutoPlay(percussionArray);
 
 window.addEventListener('keydown', (e) => {
-  const found = percussionArray.find(item => item.key === e.key);
+  const found = percussionArray.find(item => {
+    return item.key === e.key.toUpperCase();
+  });
   if (!found) return;
   found.playAudio();
   found.addPlayingState();
 });
 
 window.addEventListener('DOMContentLoaded', (e) => {
-  $('.drums').focus();
-  $('.drums').click();
+  UI.$('.drums').focus();
+  UI.$('.drums').click();
 });

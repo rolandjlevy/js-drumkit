@@ -1,4 +1,4 @@
-export class Sound {
+export default class Sound {
   constructor(src) {
     this.audio = new Audio(`sounds/${src}.wav`);
     this.audio.setAttribute('preload', 'auto');

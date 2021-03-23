@@ -1,13 +1,11 @@
-import { Sound } from './Sound.js';
+import Sound from './Sound.js';
+import UI from './UI.js';
 
-export class Percussion {
+export default class Percussion {
   constructor(key, name) {
     this.key = key;
     this.name = name;
     this.add();
-  }
-  $(selector) {
-    return document.querySelector(selector);
   }
   add() {
     this.sound = new Sound(this.name);
@@ -27,10 +25,10 @@ export class Percussion {
       this.removeMorph();
       this.removePlayingState();
     });
-    this.$('.drums').appendChild(this.section);
+    UI.$('.drums').appendChild(this.section);
   }
   playAudio() {
-    if (!this.sound) return;
+    this.sound.currentTime = 0;
     this.sound.play();
   }
   addPlayingState() {

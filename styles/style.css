@@ -56,7 +56,7 @@ h1 {
   box-shadow: 0 15px 20px -5px hsla(195, 10%, 65%, 0.6), inset -7px -7px 10px #000;
   cursor: pointer;
   user-select: none;
-	transition: background-color 0.2s ease;
+	transition: background-color 0.1s ease;
   animation: none;
 }
 
