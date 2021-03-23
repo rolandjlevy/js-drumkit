@@ -35,3 +35,5 @@ window.addEventListener('DOMContentLoaded', (e) => {
   UI.$('.drums').focus();
   UI.$('.drums').click();
 });
+
+UI.$('#year').textContent = new Date().getFullYear();

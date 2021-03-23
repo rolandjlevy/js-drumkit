@@ -1,9 +1,9 @@
-# KEY DRUMS ⌨️
+# KEYDRUMS ⌨️
 
 Play a range of different percussion instruments on the keyboard or on your phone.
 
 ### Links 🔗
-- [Play the drumkit](https://js-key-drums.rolandjlevy.repl.co/)
+- [Play keydrums](https://js-key-drums.rolandjlevy.repl.co/)
 - [View the source code](https://replit.com/@RolandJLevy/js-key-drums)
 - [Explore the Github repo](https://github.com/rolandjlevy/js-key-drums)
 

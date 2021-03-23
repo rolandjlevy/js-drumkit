@@ -139,10 +139,41 @@ h1 {
   }
 }
 
+/**********/
+/* Footer */
+/**********/
+
+footer {
+  font-size: 1rem;
+	color: hsla(195, 80%, 40%, 1);
+  text-align: center;
+}
+
+footer > a {
+	color: hsla(195, 80%, 40%, 1);
+  transition: all 0.2s ease;
+}
+
+footer > a:hover {
+  color: var(--accent-color);
+  transition: all 0.2s ease;
+}
+
+.new-tab-icon::after {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f35d";
+  margin-left: 5px;
+}
+
 .m-b-10 {
   margin-bottom: 10px;
 }
 
 .m-b-20 {
   margin-bottom: 20px;
+}
+
+.m-t-30 {
+  margin-top: 30px;
 }
